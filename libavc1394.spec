@@ -1,18 +1,19 @@
 Summary:	Programming interface to the 1394 AV/C specification
 Summary(pl):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
-Version:	0.4.1
-Release:	2
+Version:	0.5.0
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libavc1394/%{name}-%{version}.tar.gz
-# Source0-md5:	cca44f87bda7d5572473290dec7cd81e
-Patch0:		%{name}-link.patch
+# Source0-md5:	c1f1b588818546aa037150e2ced59b12
 URL:		http://sourceforge.net/projects/libavc1394/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libraw1394-devel
+# pkgconfig calls this 1.0.0
+BuildRequires:	libraw1394-devel >= 0.10.1
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,8 +39,8 @@ urz±dzeñ.
 Summary:	libavc1394 header files
 Summary(pl):	Pliki nag³ówkowe libavc1394
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	libraw1394-devel
+Requires:	%{name} = %{version}-%{release}
+Requires:	libraw1394-devel >= 0.10.1
 
 %description devel
 libavc1394 header files.
@@ -51,7 +52,7 @@ Pliki nag³ówkowe libavc1394.
 Summary:	Static libavc1394 library
 Summary(pl):	Statyczna biblioteka libavc1394
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libavc1394 library.
@@ -61,7 +62,6 @@ Statyczna biblioteka libavc1394.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 %{__libtoolize}
@@ -96,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/libavc1394
+%{_pkgconfigdir}/libavc1394.pc
 
 %files static
 %defattr(644,root,root,755)
