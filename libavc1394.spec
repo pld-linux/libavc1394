@@ -23,7 +23,7 @@ mechanism on DV camcorders. However, there are many devices and
 functions of devices that can be controlled via AV/C. Eventually, the
 library will be expanded to implement more of the specification and to
 provide high level interfaces to various devices.
-	
+
 %description -l pl
 libavc1394 to interfejs programistyczny do specyfikacji AV/C
 opracowanej przez 1394 Trade Association. AV/C oznacza Audio/Video
