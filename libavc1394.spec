@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libavc1394/%{name}-%{version}.tar.gz
+# Source0-md5:	cca44f87bda7d5572473290dec7cd81e
 Patch0:		%{name}-link.patch
 URL:		http://sourceforge.net/projects/libavc1394/
 BuildRequires:	autoconf
