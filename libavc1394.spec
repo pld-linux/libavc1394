@@ -38,6 +38,7 @@ Summary:	libavc1394 header files
 Summary(pl):	Pliki nag³ówkowe libavc1394
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libraw1394-devel
 
 %description devel
 libavc1394 header files.
