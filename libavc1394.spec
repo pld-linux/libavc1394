@@ -1,4 +1,6 @@
+# Conditional build:
 %bcond_without	static_libs	# don't build static library
+#
 Summary:	Programming interface to the 1394 AV/C specification
 Summary(pl):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
