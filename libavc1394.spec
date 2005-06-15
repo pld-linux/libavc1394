@@ -1,3 +1,4 @@
+%bcond_without	static	# don't build static library
 Summary:	Programming interface to the 1394 AV/C specification
 Summary(pl):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
@@ -69,7 +70,8 @@ Statyczna biblioteka libavc1394.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static:--disable-static}
 %{__make}
 
 %install
@@ -98,6 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/libavc1394
 %{_pkgconfigdir}/libavc1394.pc
 
+%if %{with static}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
