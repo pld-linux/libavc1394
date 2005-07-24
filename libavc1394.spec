@@ -1,15 +1,16 @@
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Programming interface to the 1394 AV/C specification
 Summary(pl):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
-Version:	0.5.0
+Version:	0.5.1
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libavc1394/%{name}-%{version}.tar.gz
-# Source0-md5:	c1f1b588818546aa037150e2ced59b12
+# Source0-md5:	64a94a8814f3642a4051a40fd5fb59c5
 URL:		http://sourceforge.net/projects/libavc1394/
 BuildRequires:	autoconf
 BuildRequires:	automake
