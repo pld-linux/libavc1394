@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Programming interface to the 1394 AV/C specification
-Summary(pl):	Interfejs programistyczny do specyfikacji 1394 AV/C
+Summary(pl.UTF-8):   Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
 Version:	0.5.3
 Release:	1
@@ -29,19 +29,19 @@ functions of devices that can be controlled via AV/C. Eventually, the
 library will be expanded to implement more of the specification and to
 provide high level interfaces to various devices.
 
-%description -l pl
+%description -l pl.UTF-8
 libavc1394 to interfejs programistyczny do specyfikacji AV/C
 opracowanej przez 1394 Trade Association. AV/C oznacza Audio/Video
-Control (czyli sterowanie Audio/Video). Aktualnie aplikacje uøywaj±
-tej biblioteki do kontroli mechanizmu przesuwu ta∂my w kamerach DV,
-lecz wiele urz±dzeÒ i ich funkcji moøna kontrolowaÊ poprzez AV/C. ByÊ
-moøe biblioteka zostanie rozszerzona, by obs≥ugiwaÊ wiÍksz± czÍ∂Ê
-specyfikacji i zapewniaÊ interfejsy wysokiego poziomu do rÛønych
-urz±dzeÒ.
+Control (czyli sterowanie Audio/Video). Aktualnie aplikacje u≈ºywajƒÖ
+tej biblioteki do kontroli mechanizmu przesuwu ta≈õmy w kamerach DV,
+lecz wiele urzƒÖdze≈Ñ i ich funkcji mo≈ºna kontrolowaƒá poprzez AV/C. Byƒá
+mo≈ºe biblioteka zostanie rozszerzona, by obs≈Çugiwaƒá wiƒôkszƒÖ czƒô≈õƒá
+specyfikacji i zapewniaƒá interfejsy wysokiego poziomu do r√≥≈ºnych
+urzƒÖdze≈Ñ.
 
 %package devel
 Summary:	libavc1394 header files
-Summary(pl):	Pliki nag≥Ûwkowe libavc1394
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe libavc1394
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libraw1394-devel >= 1.2.0
@@ -49,19 +49,19 @@ Requires:	libraw1394-devel >= 1.2.0
 %description devel
 libavc1394 header files.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe libavc1394.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe libavc1394.
 
 %package static
 Summary:	Static libavc1394 library
-Summary(pl):	Statyczna biblioteka libavc1394
+Summary(pl.UTF-8):   Statyczna biblioteka libavc1394
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libavc1394 library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libavc1394.
 
 %prep
