@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Programming interface to the 1394 AV/C specification
-Summary(pl.UTF-8):   Interfejs programistyczny do specyfikacji 1394 AV/C
+Summary(pl.UTF-8):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
 Version:	0.5.3
 Release:	1
@@ -41,7 +41,7 @@ urządzeń.
 
 %package devel
 Summary:	libavc1394 header files
-Summary(pl.UTF-8):   Pliki nagłówkowe libavc1394
+Summary(pl.UTF-8):	Pliki nagłówkowe libavc1394
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libraw1394-devel >= 1.2.0
@@ -54,7 +54,7 @@ Pliki nagłówkowe libavc1394.
 
 %package static
 Summary:	Static libavc1394 library
-Summary(pl.UTF-8):   Statyczna biblioteka libavc1394
+Summary(pl.UTF-8):	Statyczna biblioteka libavc1394
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
