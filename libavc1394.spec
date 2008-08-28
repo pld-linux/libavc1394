@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
 Version:	0.5.3
 Release:	3
-License:	LGPL
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libavc1394/%{name}-%{version}.tar.gz
 # Source0-md5:	09e30b1fb5ae455b6d8407e457a711a3
@@ -92,19 +92,29 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
-%{_mandir}/man1/*.1*
+%attr(755,root,root) %{_bindir}/dvcont
+%attr(755,root,root) %{_bindir}/mkrfc2734
+%attr(755,root,root) %{_bindir}/panelctl
+%attr(755,root,root) %{_libdir}/libavc1394.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libavc1394.so.0
+%attr(755,root,root) %{_libdir}/librom1394.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/librom1394.so.0
+%{_mandir}/man1/dvcont.1*
+%{_mandir}/man1/mkrfc2734.1*
+%{_mandir}/man1/panelctl.1*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libavc1394.so
+%attr(755,root,root) %{_libdir}/librom1394.so
+%{_libdir}/libavc1394.la
+%{_libdir}/librom1394.la
 %{_includedir}/libavc1394
 %{_pkgconfigdir}/libavc1394.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libavc1394.a
+%{_libdir}/librom1394.a
 %endif
