@@ -5,12 +5,12 @@
 Summary:	Programming interface to the 1394 AV/C specification
 Summary(pl.UTF-8):	Interfejs programistyczny do specyfikacji 1394 AV/C
 Name:		libavc1394
-Version:	0.5.3
-Release:	3
+Version:	0.5.4
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/libavc1394/%{name}-%{version}.tar.gz
-# Source0-md5:	09e30b1fb5ae455b6d8407e457a711a3
+Source0:	http://downloads.sourceforge.net/libavc1394/%{name}-%{version}.tar.gz
+# Source0-md5:	caf0db059d8b8d35d6f08e6c0e1c7dfe
 URL:		http://sourceforge.net/projects/libavc1394/
 BuildRequires:	autoconf
 BuildRequires:	automake
